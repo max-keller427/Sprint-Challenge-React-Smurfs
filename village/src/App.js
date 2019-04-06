@@ -7,7 +7,15 @@ import NavBar from "./components/NavBar";
 
 import axios from "axios";
 import { Route, NavLink, Link } from "react-router-dom";
+import styled from "styled-components";
 
+const ContainerApp = styled.div`
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3b98e4;
+`;
 class App extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +41,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <ContainerApp>
         <div>
           <NavBar />
         </div>
@@ -46,7 +54,7 @@ class App extends Component {
           path="/"
           render={props => <Smurfs smurfs={this.state.smurfs} />}
         />
-      </div>
+      </ContainerApp>
     );
   }
 }
