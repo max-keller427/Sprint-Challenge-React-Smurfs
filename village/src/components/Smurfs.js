@@ -8,6 +8,7 @@ const ListDiv = styled.div`
   flex-direction: column;
   align-items: center;
   color: white;
+  margin-bottom: 50px;
 `;
 const NoPadding = styled.ul`
   padding: 0;

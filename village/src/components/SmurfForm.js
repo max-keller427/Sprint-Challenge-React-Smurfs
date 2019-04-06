@@ -4,8 +4,8 @@ import axios from "axios";
 import styled from "styled-components";
 
 const ContainerDiv = styled.div`
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin-top: 20px;
+  margin-bottom: 150px;
 `;
 
 const StyledForm = styled.form`
@@ -18,6 +18,25 @@ const StyledInput = styled.input`
   margin-bottom: 5px;
   border-radius: 10px;
   border: 1px solid white;
+  ::placeholder {
+    color: #3b98e4;
+    text-align: center;
+  }
+`;
+
+const StyledButton = styled.button`
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: white;
+  color: #3b98e4;
+`;
+
+const StyledH2 = styled.h2`
+  font-size: 2rem;
+  color: white;
+  margin-left: 4px;
 `;
 
 class SmurfForm extends Component {
@@ -29,7 +48,7 @@ class SmurfForm extends Component {
       height: ""
     };
   }
-  // :)
+
   addSmurf = event => {
     event.preventDefault();
     // add code to create the smurf using the api
@@ -53,6 +72,7 @@ class SmurfForm extends Component {
   render() {
     return (
       <ContainerDiv>
+        <StyledH2>Add A Smurf!</StyledH2>
         <StyledForm onSubmit={this.addSmurf}>
           <StyledInput
             onChange={this.handleInputChange}
@@ -72,7 +92,7 @@ class SmurfForm extends Component {
             value={this.state.height}
             name="height"
           />
-          <button type="submit">Add to the village</button>
+          <StyledButton type="submit">Add to the village</StyledButton>
         </StyledForm>
       </ContainerDiv>
     );
