@@ -1,20 +1,26 @@
-import React from 'react';
+import React from "react";
+import styled from "styled-components";
 
+const ListDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+`;
 const Smurf = props => {
   return (
-    <div className="Smurf">
+    <ListDiv>
       <h3>{props.name}</h3>
       <strong>{props.height} tall</strong>
       <p>{props.age} smurf years old</p>
-    </div>
+    </ListDiv>
   );
 };
 
 Smurf.defaultProps = {
-  name: '',
-  height: '',
-  age: ''
+  name: "",
+  height: "",
+  age: ""
 };
 
 export default Smurf;
-

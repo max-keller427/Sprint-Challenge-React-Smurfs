@@ -1,3 +1,11 @@
-.App {
+/* .App {
   text-align: center;
+} */
+
+.NavLink {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
 }
